@@ -60,5 +60,12 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem "rspec-rails", "~> 6.1"
+  gem "vcr"
+  gem "webmock"
+end
 
-gem "rspec-rails", "~> 6.1", :group => :test
+gem "open-uri", "~> 0.4.0"
+
+gem "whenever", "~> 1.0", require: false

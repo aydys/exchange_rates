@@ -75,14 +75,19 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     base64 (0.2.0)
     bigdecimal (3.1.4)
     bindex (0.8.1)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    chronic (0.10.2)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.4)
     debug (1.8.0)
@@ -94,6 +99,7 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hashdiff (1.0.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.3)
@@ -136,9 +142,14 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
+    open-uri (0.4.0)
+      stringio
+      time
+      uri
     pg (1.5.4)
     psych (5.1.1.1)
       stringio
+    public_suffix (5.0.4)
     puma (6.4.0)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -188,6 +199,7 @@ GEM
       connection_pool
     reline (0.4.0)
       io-console (~> 0.5)
+    rexml (3.2.6)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -217,6 +229,8 @@ GEM
       railties (>= 6.0.0)
     stringio (3.0.9)
     thor (1.3.0)
+    time (0.3.0)
+      date
     timeout (0.4.1)
     turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
@@ -224,15 +238,23 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.13.0)
+    vcr (6.2.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webmock (3.19.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     webrick (1.8.1)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
     zeitwerk (2.6.12)
 
 PLATFORMS
@@ -245,6 +267,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  open-uri (~> 0.4.0)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
@@ -254,7 +277,10 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  vcr
   web-console
+  webmock
+  whenever (~> 1.0)
 
 RUBY VERSION
    ruby 3.2.2p53

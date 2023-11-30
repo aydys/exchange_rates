@@ -7,4 +7,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get 'currencies', to: 'dashboard#currencies'
+
+  get 'table', to: 'dashboard#table'
+
+  root "dashboard#chart"
 end

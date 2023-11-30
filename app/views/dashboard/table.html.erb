@@ -1,0 +1,31 @@
+<p>
+  <%= link_to 'Перейти к графику', root_path %>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Валюта</th>
+      <th>4 недели назад</th>
+      <th>3 недели назад</th>
+      <th>подзапрошлая неделя</th>
+      <th>прошлая неделя</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @usd.each do |data| %>
+        <td><%= data %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @eur.each do |data| %>
+        <td><%= data %></td>
+      <% end %>
+    </tr>
+        <tr>
+      <% @cny.each do |data| %>
+        <td><%= data %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

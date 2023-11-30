@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Main Commands:
 
-Things you may want to cover:
+Run setup:
 
-* Ruby version
+  ```make setup```
 
-* System dependencies
+Start server:
 
-* Configuration
+ ```make server```
 
-* Database creation
+Run test:
 
-* Database initialization
+ ```make test```
 
-* How to run the test suite
+Start schedule:
 
-* Services (job queues, cache servers, search engines, etc.)
+ ```make schedule```
 
-* Deployment instructions
+Stop schedule:
 
-* ...
+ ```make stop_schedule```
